@@ -14,11 +14,14 @@ public static class DifferenceOfSquares
 
     public static int CalculateSumOfSquares(int max)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        double sum = 0;
+
+        for (int i = 1; i <= max; i++)
+            sum += Math.Pow(i, 2);
+
+        return Convert.ToInt32(sum);
     }
 
-    public static int CalculateDifferenceOfSquares(int max)
-    {
-        throw new NotImplementedException("You need to implement this function.");
-    }
+    public static int CalculateDifferenceOfSquares(int max) =>
+        CalculateSquareOfSum(max) - CalculateSumOfSquares(max);
 }
