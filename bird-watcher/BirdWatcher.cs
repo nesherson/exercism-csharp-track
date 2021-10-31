@@ -18,7 +18,7 @@ class BirdCount
 
     public int Today()
     {
-        throw new NotImplementedException("Please implement the BirdCount.Today() method");
+        return birdsPerDay[birdsPerDay.Length];
     }
 
     public void IncrementTodaysCount()
