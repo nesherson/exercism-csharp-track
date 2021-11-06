@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 class BirdCount
 {
@@ -28,7 +29,7 @@ class BirdCount
 
     public bool HasDayWithoutBirds()
     {
-        throw new NotImplementedException("Please implement the BirdCount.HasDayWithoutBirds() method");
+        return birdsPerDay.Any(b => b == 0);
     }
 
     public int CountForFirstDays(int numberOfDays)
