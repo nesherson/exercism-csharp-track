@@ -45,6 +45,13 @@ class BirdCount
 
     public int BusyDays()
     {
-        throw new NotImplementedException("Please implement the BirdCount.BusyDays() method");
+        int busyDaysCount = 0;
+        foreach (var birds in birdsPerDay)
+        {
+            if (birds >= 5)
+                busyDaysCount++;
+        }
+
+        return busyDaysCount;
     }
 }
