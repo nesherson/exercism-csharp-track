@@ -10,13 +10,13 @@ static class SavingsAccount
             return 0.5f;
         else if (balance >= 1000 && balance < 5000)
             return 1.621f;
-        else if (balance >= 5000)
+        else
             return 2.475f;
     }
 
     public static decimal Interest(decimal balance)
     {
-        throw new NotImplementedException("Please implement the (static) SavingsAccount.Interest() method");
+        return balance * Convert.ToDecimal(InterestRate(balance) / 100);
     }
 
     public static decimal AnnualBalanceUpdate(decimal balance)
