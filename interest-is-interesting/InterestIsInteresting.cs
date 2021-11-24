@@ -26,6 +26,15 @@ static class SavingsAccount
 
     public static int YearsBeforeDesiredBalance(decimal balance, decimal targetBalance)
     {
-        throw new NotImplementedException("Please implement the (static) SavingsAccount.YearsBeforeDesiredBalance() method");
+        decimal tempBalance = balance;
+        int yearsRequired = 0;
+
+        while (tempBalance < targetBalance)
+        {
+            tempBalance += Interest(tempBalance);
+            yearsRequired++;
+        }
+
+        return yearsRequired;
     }
 }
