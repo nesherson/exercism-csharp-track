@@ -5,7 +5,7 @@ public static class Languages
 {
     public static List<string> NewList()
     {
-        throw new NotImplementedException("Please implement the static Languages.NewList() method");
+        return new List<string>();
     }
 
     public static List<string> GetExistingLanguages()
