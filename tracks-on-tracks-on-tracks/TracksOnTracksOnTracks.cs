@@ -22,7 +22,7 @@ public static class Languages
 
     public static int CountLanguages(List<string> languages)
     {
-        throw new NotImplementedException("Please implement the static Languages.CountLanguages() method");
+        return languages.Count;
     }
 
     public static bool HasLanguage(List<string> languages, string language)
