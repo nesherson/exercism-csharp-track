@@ -27,7 +27,7 @@ public static class Languages
 
     public static bool HasLanguage(List<string> languages, string language)
     {
-        throw new NotImplementedException("Please implement the static Languages.HasLanguage() method");
+        return languages.Contains(language);
     }
 
     public static List<string> ReverseList(List<string> languages)
