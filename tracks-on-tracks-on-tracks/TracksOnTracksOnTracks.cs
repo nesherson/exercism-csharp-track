@@ -38,7 +38,16 @@ public static class Languages
 
     public static bool IsExciting(List<string> languages)
     {
-        throw new NotImplementedException("Please implement the static Languages.IsExciting() method");
+        if (languages[0] == "C#")
+            return true;
+
+        if (languages.Count == 2 || languages.Count == 3)
+        {
+            if (languages[1] == "C#")
+                return true;
+        }
+
+        return false;
     }
 
     public static List<string> RemoveLanguage(List<string> languages, string language)
