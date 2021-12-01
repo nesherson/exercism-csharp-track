@@ -38,6 +38,9 @@ public static class Languages
 
     public static bool IsExciting(List<string> languages)
     {
+        if (languages.Count <= 0)
+            return false;
+
         if (languages[0] == "C#")
             return true;
 
@@ -59,6 +62,23 @@ public static class Languages
 
     public static bool IsUnique(List<string> languages)
     {
-        throw new NotImplementedException("Please implement the static Languages.IsUnique() method");
+        if (languages.Count <= 0)
+            return false;
+
+        for (int i = 0; i < languages.Count; i++)
+        {
+            string tempLang = languages[i];
+            int tempLangIndex = i;
+
+            for (int j = 0; j < languages.Count; j++)
+            {
+                if (tempLang == languages[j] && tempLangIndex != j)
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }
