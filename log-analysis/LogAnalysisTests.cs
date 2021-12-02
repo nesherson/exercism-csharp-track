@@ -11,12 +11,12 @@ public class LogAnalysisTests
         Assert.Equal(" am the 1st test", "I am the 1st test".SubstringAfter("I"));
     }
 
-    // [Fact]
-    // [Task(1)]
-    // public void SubstringAfter_WithDelimeterOfLengthLongerThan1()
-    // {
-    //     Assert.Equal(" test", "I am the 2nd test".SubstringAfter("2nd"));
-    // }
+    [Fact]
+    [Task(1)]
+    public void SubstringAfter_WithDelimeterOfLengthLongerThan1()
+    {
+        Assert.Equal(" test", "I am the 2nd test".SubstringAfter("2nd"));
+    }
 
     // [Fact]
     // [Task(2)]
