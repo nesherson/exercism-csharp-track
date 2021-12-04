@@ -40,11 +40,11 @@ public class LogAnalysisTests
         Assert.Equal("Library is deprecated.", log.Message());
     }
 
-    // [Fact]
-    // [Task(4)]
-    // public void LogLevel()
-    // {
-    //     var log = "[WARNING]: Library is deprecated.";
-    //     Assert.Equal("WARNING", log.LogLevel());;
-    // }
+    [Fact]
+    [Task(4)]
+    public void LogLevel()
+    {
+        var log = "[WARNING]: Library is deprecated.";
+        Assert.Equal("WARNING", log.LogLevel()); ;
+    }
 }

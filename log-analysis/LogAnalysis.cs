@@ -28,5 +28,8 @@ public static class LogAnalysis
 
     // TODO: define the 'LogLevel()' extension method on the `string` type
 
-
+    public static string LogLevel(this string str)
+    {
+        return str.SubstringBetween("[", "]");
+    }
 }
