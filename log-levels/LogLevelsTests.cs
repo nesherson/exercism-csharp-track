@@ -31,26 +31,26 @@ public class LogLevelsTests
         Assert.Equal("Timezone not set", LogLine.Message("[WARNING]:   \tTimezone not set  \r\n"));
     }
 
-    // [Fact]
-    // [Task(2)]
-    // public void Error_log_level()
-    // {
-    //     Assert.Equal("error", LogLine.LogLevel("[ERROR]: Disk full"));
-    // }
+    [Fact]
+    [Task(2)]
+    public void Error_log_level()
+    {
+        Assert.Equal("error", LogLine.LogLevel("[ERROR]: Disk full"));
+    }
 
-    // [Fact]
-    // [Task(2)]
-    // public void Warning_log_level()
-    // {
-    //     Assert.Equal("warning", LogLine.LogLevel("[WARNING]: Unsafe password"));
-    // }
+    [Fact]
+    [Task(2)]
+    public void Warning_log_level()
+    {
+        Assert.Equal("warning", LogLine.LogLevel("[WARNING]: Unsafe password"));
+    }
 
-    // [Fact]
-    // [Task(2)]
-    // public void Info_log_level()
-    // {
-    //     Assert.Equal("info", LogLine.LogLevel("[INFO]: Timezone changed"));
-}
+    [Fact]
+    [Task(2)]
+    public void Info_log_level()
+    {
+        Assert.Equal("info", LogLine.LogLevel("[INFO]: Timezone changed"));
+    }
 
     // [Fact]
     // [Task(3)]
