@@ -52,31 +52,31 @@ public class LogLevelsTests
         Assert.Equal("info", LogLine.LogLevel("[INFO]: Timezone changed"));
     }
 
-    // [Fact]
-    // [Task(3)]
-    // public void Error_reformat()
-    // {
-    //     Assert.Equal("Segmentation fault (error)", LogLine.Reformat("[ERROR]: Segmentation fault"));
-    // }
+    [Fact]
+    [Task(3)]
+    public void Error_reformat()
+    {
+        Assert.Equal("Segmentation fault (error)", LogLine.Reformat("[ERROR]: Segmentation fault"));
+    }
 
-    // [Fact]
-    // [Task(3)]
-    // public void Warning_reformat()
-    // {
-    //     Assert.Equal("Decreased performance (warning)", LogLine.Reformat("[WARNING]: Decreased performance"));
-    // }
+    [Fact]
+    [Task(3)]
+    public void Warning_reformat()
+    {
+        Assert.Equal("Decreased performance (warning)", LogLine.Reformat("[WARNING]: Decreased performance"));
+    }
 
-    // [Fact]
-    // [Task(3)]
-    // public void Info_reformat()
-    // {
-    //     Assert.Equal("Disk defragmented (info)", LogLine.Reformat("[INFO]: Disk defragmented"));
-    // }
+    [Fact]
+    [Task(3)]
+    public void Info_reformat()
+    {
+        Assert.Equal("Disk defragmented (info)", LogLine.Reformat("[INFO]: Disk defragmented"));
+    }
 
-    // [Fact]
-    // [Task(3)]
-    // public void Reformat_with_leading_and_trailing_white_space()
-    // {
-    //     Assert.Equal("Corrupt disk (error)", LogLine.Reformat("[ERROR]: \t Corrupt disk\t \t \r\n"));
-    // }
+    [Fact]
+    [Task(3)]
+    public void Reformat_with_leading_and_trailing_white_space()
+    {
+        Assert.Equal("Corrupt disk (error)", LogLine.Reformat("[ERROR]: \t Corrupt disk\t \t \r\n"));
+    }
 }
