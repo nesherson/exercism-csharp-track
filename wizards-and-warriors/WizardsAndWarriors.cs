@@ -29,7 +29,7 @@ class Warrior : Character
 
     public override int DamagePoints(Character target)
     {
-        return 0;
+        return target.Vulnerable() ? 10 : 6;
     }
 }
 
