@@ -35,17 +35,19 @@ class Warrior : Character
 
 class Wizard : Character
 {
+    private bool _spellPrepared;
     public Wizard() : base("Wizard")
     {
+        _spellPrepared = false;
     }
 
     public override int DamagePoints(Character target)
     {
-        throw new NotImplementedException("Please implement the Wizard.DamagePoints() method");
+        return _spellPrepared ? 12 : 3;
     }
 
     public void PrepareSpell()
     {
-        throw new NotImplementedException("Please implement the Wizard.PrepareSpell() method");
+        _spellPrepared = true;
     }
 }
