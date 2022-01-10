@@ -29,7 +29,7 @@ class Warrior : Character
 
     public override int DamagePoints(Character target)
     {
-        throw new NotImplementedException("Please implement the Warrior.DamagePoints() method");
+        return 0;
     }
 }
 
@@ -44,6 +44,11 @@ class Wizard : Character
     public override int DamagePoints(Character target)
     {
         return _spellPrepared ? 12 : 3;
+    }
+
+    public override bool Vulnerable()
+    {
+        return !_spellPrepared;
     }
 
     public void PrepareSpell()
