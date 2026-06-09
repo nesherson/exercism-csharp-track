@@ -2,11 +2,23 @@ public static class SquareRoot
 {
     public static int Root(int number)
     {
-        var counter = 0;
+        var left = 0;
+        var right = number + 1;
 
-        while ((counter + 1) * (counter + 1) <= number)
-            counter++;
+        while (left != right - 1)
+        {
+            var midpoint = (left + right) / 2;
 
-        return counter;
+            if (midpoint * midpoint <= number)
+            {
+                left = midpoint;
+            }
+            else
+            {
+                right = midpoint;
+            }
+        }
+
+        return left;
     }
 }
